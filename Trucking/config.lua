@@ -13,7 +13,7 @@ Config = {
             vehicles = {'phantom', 'trailers2'},
             start = {
                 {vector3(855.2794, -3210.29, 5.9006), 180.0},
-            }, 
+            },
             trailer = {
                 -- Near Trucking HQ
                 {vector3(900.6, -3185, 5.9), 0.0},
