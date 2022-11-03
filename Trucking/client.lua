@@ -51,7 +51,7 @@ end)
 RegisterNetEvent('esx_ets:start')
 AddEventHandler('esx_ets:start', function(data, jobid)
     data.start = data.start[math.random(#data.start)]
-    data.trailer = data.trailer [math.random(#data.trailer)]
+    data.trailer = data.trailer[math.random(#data.trailer)]
     data.arrive = data.arrive[math.random(#data.arrive)]
     working = true
     local truck, trailer = loadVehicle(data.vehicles[1], data.start[1], data.start[2]), loadVehicle(data.vehicles[2], data.trailer[1], data.trailer[2])
@@ -59,6 +59,18 @@ AddEventHandler('esx_ets:start', function(data, jobid)
     local destinationBlip, truckBlip, trailerBlip = addBlip(data.arrive, 38, 3, Strings['destination'])
     local hasTrailer = false
     while true do
+        if GetEntityCoords(trailer) == vector3(0,0,0) then -- If trailer can't spawn
+            working = false
+            text('Your trailer couldn\'t spawn properly, please start a new trucking job', 5000)
+            if DoesBlipExist(truckBlip) then RemoveBlip(truckBlip) end
+            if DoesBlipExist(trailerBlip) then RemoveBlip(trailerBlip) end
+            if DoesBlipExist(destinationBlip) then RemoveBlip(destinationBlip) end
+            Citizen.SetTimeout(60000, function()
+                DeleteVehicle(truck)
+                DeleteVehicle(trailer)
+              end)
+            return
+        end
         if GetVehicleEngineHealth(truck) <= 150 then -- If truck is incapacitated
             working = false
             if DoesBlipExist(truckBlip) then RemoveBlip(truckBlip) end
