@@ -28,8 +28,8 @@ AddEventHandler('esx_taxijob:success', function(billingabout)
 
 			TriggerEvent('esx_addonaccount:getSharedAccount', 'society_taxi', function(account)
 				if account then
-					local playerMoney  = ESX.Math.Round(total / 100 * 50)
-					local societyMoney = ESX.Math.Round(total / 100 * 50)
+					local playerMoney  = ESX.Math.Round(total / 100 * Config.PlayerCut)
+					local societyMoney = ESX.Math.Round(total / 100 * (100 - Config.PlayerCut))
 
 					xPlayer.addMoney(playerMoney)
 					TriggerEvent("edge_admin:log_money", "Job Pay", xPlayer.identifier, xPlayer.name, xPlayer.job.name..": "..xPlayer.job.grade_name.." - $"..amount, "#4c97ae")

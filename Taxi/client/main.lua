@@ -647,6 +647,8 @@ Citizen.CreateThread(function()
 										DeletePed(customer)
 									end)
 								end
+								
+								meterAttrs['rateAmount'] = 0.0
 
 								scope(CurrentCustomer)
 
@@ -717,7 +719,7 @@ Citizen.CreateThread(function()
 									if freeSeat then
 										TaskEnterVehicle(CurrentCustomer, vehicle, -1, freeSeat, 2.0, 0)
 										TriggerEvent('esx_taximeter:resetMeter')
-										meterAttrs['rateAmount'] = 500
+										meterAttrs['rateAmount'] = Config.FarePerDistance
 										CustomerIsEnteringVehicle = true
 									end
 								end

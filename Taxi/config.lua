@@ -1,5 +1,8 @@
 Config                            = {}
 
+Config.FarePerDistance 			  = 500
+Config.PlayerCut				  = 50
+
 Config.DrawDistance               = 100
 
 Config.NPCJobEarnings             = {min = 150, max = 200}
@@ -13,7 +16,7 @@ Config.Locale                     = 'en'
 
 Config.AuthorizedVehicles = {
 	{model = 'taxi', label = 'Toyota Camry'},
-	{model = 'sjcamry', label = 'Toyota Camry (new)'},
+	-- {model = 'sjcamry', label = 'Toyota Camry (new)'},
 }
 
 Config.Zones = {
