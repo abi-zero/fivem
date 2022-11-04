@@ -110,7 +110,7 @@ function StopTaxiJob()
 
 	if IsPedInAnyVehicle(playerPed, false) and CurrentCustomer ~= nil then
 		local vehicle = GetVehiclePedIsIn(playerPed,  false)
-		TaskLeaveVehicle(CurrentCustomer,  vehicle,  0)
+		TaskLeaveVehicle(CurrentCustomer,  vehicle,  1)
 
 		if CustomerEnteredVehicle then
 			TaskGoStraightToCoord(CurrentCustomer,  targetCoords.x,  targetCoords.y,  targetCoords.z,  1.0,  -1,  0.0,  0.0)
@@ -583,7 +583,7 @@ Citizen.CreateThread(function()
 
 							SetBlipAsFriendly(CurrentCustomerBlip, true)
 							SetBlipColour(CurrentCustomerBlip, 2)
-							SetBlipCategory(CurrentCustomerBlip, 3)
+							SetBlipCategory(CurrentCustomerBlip, 2)
 							SetBlipRoute(CurrentCustomerBlip, true)
 
 							SetEntityAsMissionEntity(CurrentCustomer, true, false)
@@ -625,7 +625,7 @@ Citizen.CreateThread(function()
 							local targetDistance = #(playerCoords - targetCoords)
 
 							if targetDistance <= 10.0 then
-								TaskLeaveVehicle(CurrentCustomer, vehicle, 0)
+								TaskLeaveVehicle(CurrentCustomer, vehicle, 1)
 
 								ESX.ShowNotification(_U('arrive_dest'))
 
