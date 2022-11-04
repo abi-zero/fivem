@@ -224,6 +224,7 @@ function OpenVehicleSpawnerMenu()
 				SetVehicleExtra(vehicle,4,0)
 				SetVehicleNumberPlateText(vehicle, 'P  HX '.. math.random(10,99))
 				TaskWarpPedIntoVehicle(playerPed, vehicle, -1)
+				SetVehicleDirtLevel(vehicle, 0.0)
 			end)
 		end, function(data, menu)
 			CurrentAction     = 'vehicle_spawner'
