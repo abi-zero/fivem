@@ -1,7 +1,7 @@
 ESX = nil
 local lastPlayerSuccess = {}
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+ESX = exports["es_extended"]:getSharedObject()
 
 if Config.MaxInService ~= -1 then
 	TriggerEvent('esx_service:activateService', 'taxi', Config.MaxInService)

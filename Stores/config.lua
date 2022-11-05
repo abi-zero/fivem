@@ -155,17 +155,17 @@ Config.Stores = {
             {
                 title = 'Sides',
                 products = {
-                    { label = 'Large Fries', name = 'fries', price = 5, image = 'https://imgur.com/E2F6pbr.png' },
+                    { label = 'Large Fries', name = 'fries', price = 3.90, image = 'https://imgur.com/E2F6pbr.png' },
                     { label = 'Hash Brown', name = 'hashbrown', price = 2.60, image = 'https://imgur.com/9oihQWH.png' },
                 }
             },
             {
                 title = 'Drinks',
                 products = {
-                    { label = 'Large Sprite', name = 'largesprite', price = 5, image = 'https://imgur.com/byLpum4.png' },
-                    { label = 'Large Coke', name = 'largecoke', price = 5, image = 'https://imgur.com/LN3bwFI.png' },
-                    { label = 'Large Vanilla Coke', name = 'vanillacoke', price = 5, image = 'https://imgur.com/TTi4Xnt.png' },
-                    { label = 'Large Fanta', name = 'largefanta', price = 5, image = 'https://imgur.com/1ugVLe1.png' },
+                    { label = 'Large Sprite', name = 'largesprite', price = 4.60, image = 'https://imgur.com/byLpum4.png' },
+                    { label = 'Large Coke', name = 'largecoke', price = 4.60, image = 'https://imgur.com/LN3bwFI.png' },
+                    { label = 'Large Vanilla Coke', name = 'vanillacoke', price = 4.60, image = 'https://imgur.com/TTi4Xnt.png' },
+                    { label = 'Large Fanta', name = 'largefanta', price = 4.60, image = 'https://imgur.com/1ugVLe1.png' },
                 }
             },
             {
@@ -368,7 +368,7 @@ Config.Stores = {
 -- Be sure to not remove %s in strings, they get replaced with values.
 
 Config.lang = {
-    press_e = 'Press ~INPUT_CONTEXT~ to open %s',
+    press_e = '~INPUT_CONTEXT~ Buy from %s',
     press_e_qbcore = '[E] Open %s',
     currency = '$%s',
     add_to_cart = 'Add to cart',
