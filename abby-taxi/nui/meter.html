@@ -1,0 +1,38 @@
+<head>
+	<script src="nui://game/ui/jquery.js" type="text/javascript">
+	</script>
+	<script src="meter.js" type="text/javascript"></script>
+	<link href="meter.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onselectstart="return false;" ondragstart="return false;">
+	<div id="meter" style="display: none;">
+		<div id="fare">
+			<div class="container">
+				<div id="fare-amount" class="meter-field fare">
+					<img id="amt-dollar" src="img/$.png">
+					<img id="amt-7" src="img/digits.png">
+					<img id="amt-6" src="img/digits.png">
+					<img id="amt-5" src="img/digits.png">
+					<img id="amt-4" src="img/digits.png">
+					<img id="amt-3" src="img/dot.png">
+					<img id="amt-2" src="img/digits.png">
+					<img id="amt-1" src="img/digits.png">
+				</div>
+				<div class="label">Fare</div>
+			</div>
+			<div class="container">
+				<div id="rate" class="meter-field rate">
+					<img id="rate-dollar" src="img/$.png">
+					<img id="rate-3" src="img/0.png">
+					<img id="rate-2" src="img/0.png">
+					<img id="rate-1" src="img/0.png">
+				</div>
+				<div class="label">Rate per KM</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

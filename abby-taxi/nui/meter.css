@@ -1,0 +1,339 @@
+#meter {
+	width: 595px;
+	height: 50px;
+
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+	margin: auto;
+
+	color: white;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#fare {
+	width: 370px;
+	height: 120px;
+
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	margin: auto;
+
+	color: white;
+	border-radius: 10px;
+
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	grid-template-columns: repeat(2, 2fr);
+	background-image: url("img/fare2.png");
+	padding: 2%;
+}
+
+#fare .label {
+	display: grid;
+	grid-area: label;
+}
+
+#fare .container {
+	display: grid;
+	align-items:center;
+	grid-template-columns: 100%;
+	grid-template-rows: 75% 25%;
+	grid-template-areas:
+		"meter-field"
+		"label";
+		margin-top: 35px;
+		margin-bottom: 30px;
+}
+
+#rate .container {
+	display: grid;
+	align-items:center;
+	grid-template-columns: 100%;
+	grid-template-rows: 75% 25%;
+	grid-template-areas:
+		"meter-field"
+		"label";
+		margin-top: 35px;
+		margin-bottom: 30px;
+}
+#fare .meter-field {
+	grid-area: 'meter-field';
+	font-family: "Verdana";
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-align:center;
+	overflow-x: hidden;
+}
+
+#fare .label {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	text-align: center;
+}
+
+#config {
+	background-image: url("img/phone.png");
+	width: 280px;
+	height: 450px;
+	position: absolute;
+	left: 90%;
+	transform: translateX(-50%);
+  padding: 10px;
+	position: absolute;
+	top: 65%;
+	margin-top: -250px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+#config h1{
+  margin-top: 120px;
+  font-size: 18px;
+  font-family: 'Digital-7';
+   text-align: center;
+}
+
+#config .button{
+  font-family: 'Arial';
+  padding: 8px;
+  width: 100px;
+  opacity: 0.8;
+  font-size: 12px;
+  margin: 0 auto;
+  background:  #000000;
+  color: yellow;
+  margin-bottom: 10px;
+   text-align: center;
+}
+#fare-amount {
+	display:inline;
+	height:32px;
+	width:128px;
+	margin-left:32px;
+	overflow:hidden;
+	border-bottom:1px solid yellow;
+	border-top:1px solid yellow;
+	border-right:1px solid yellow;
+}
+#fare-amount > img {
+	width:16px;
+	right:0px;
+	left:0px;
+	top:0px;
+	bottom:0px;
+    display:inline;
+    border-left:1px solid yellow;
+	border-right:1px solid yellow;
+}
+
+.container > #fare-amount{
+    display: grid;
+    grid-template-columns: 16px 16px 16px 16px 16px 16px 16px 16px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "amt-dollar amt-7 amt-6 amt-5 amt-4 amt-3 amt-2 amt-1";
+  }
+#amt-dollar {
+	grid-area: "amt-dollar";
+}
+#amt-7{
+	grid-area: "amt-7";
+}
+#amt-6 {
+	grid-area: "amt-6";
+}
+#amt-5 {
+	grid-area: "amt-5";
+}
+#amt-4 {
+	grid-area: "amt-4";
+}
+#amt-3 {
+	grid-area: "amt-3";
+}
+#amt-2 {
+	grid-area: "amt-2";
+}
+#amt-1 {
+	grid-area: "amt-1";
+}
+#rate {
+	display:inline;
+	height:34px;
+	width:40%;
+	margin-left:30%;
+	overflow:hidden;
+}
+#rate > img {
+	height:32px;
+	width:16px;
+	right:0px;
+	left:0px;
+	top:0px;
+	bottom:0px;
+    display:inline;
+    border:1px solid yellow;
+}
+.container > #rate{
+    display: grid;
+    grid-template-columns: 16px 16px 16px 16px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "rate-dollar rate-3 rate-2 rate-1";
+  }
+#rate-dollar {
+	grid-area: "rate-dollar"
+}
+#rate-3 {
+	grid-area: "rate-3";
+}
+#rate-2 {
+	grid-area: "rate-2";
+}
+#rate-1 {
+	grid-area: "rate-1";
+}
+
+@keyframes anim1 {
+	0% {
+		object-position: 0px 0px;
+	}
+	100% {
+		object-position: 0px -32px;
+	}
+}
+@keyframes anim2 {
+	0% {
+		object-position: 0px -32px;
+	}
+	100% {
+		object-position: 0px -64px;
+	}
+}
+@keyframes anim3 {
+	0% {
+		object-position: 0px -64px;
+	}
+	100% {
+		object-position: 0px -96px;
+	}
+}
+@keyframes anim4 {
+	0% {
+		object-position: 0px -96px;
+	}
+	100% {
+		object-position: 0px -128px;
+	}
+}
+@keyframes anim5 {
+	0% {
+		object-position: 0px -128px;
+	}
+	100% {
+		object-position: 0px -160px;
+	}
+}
+@keyframes anim6 {
+	0% {
+		object-position: 0px -160px;
+	}
+	100% {
+		object-position: 0px -192px;
+	}
+}
+@keyframes anim7 {
+	0% {
+		object-position: 0px -192px;
+	}
+	100% {
+		object-position: 0px -224px;
+	}
+}
+@keyframes anim8 {
+	0% {
+		object-position: 0px -224px;
+	}
+	100% {
+		object-position: 0px -256px;
+	}
+}
+@keyframes anim9 {
+	0% {
+		object-position: 0px -256px;
+	}
+	100% {
+		object-position: 0px -288px;
+	}
+}
+@keyframes anim0 {
+	0% {
+		object-position: 0px -288px;
+	}
+	100% {
+		object-position: 0px -320px;
+	}
+}
+
+
+
+.anim1 {
+	animation-name: anim1;
+	animation-duration: 200ms;
+}
+.anim2 {
+	animation-name: anim2;
+	animation-duration: 200ms;
+}
+.anim3 {
+	animation-name: anim3;
+	animation-duration: 200ms;
+}
+.anim4 {
+	animation-name: anim4;
+	animation-duration: 200ms;
+}
+.anim5 {
+	animation-name: anim5;
+	animation-duration: 200ms;
+}
+.anim6 {
+	animation-name: anim6;
+	animation-duration: 200ms;
+}
+.anim7 {
+	animation-name: anim7;
+	animation-duration: 200ms;
+}
+.anim8 {
+	animation-name: anim8;
+	animation-duration: 200ms;
+}
+.anim9 {
+	animation-name: anim9;
+	animation-duration: 200ms;
+}
+.anim0 {
+	animation-name: anim0;
+	animation-duration: 200ms;
+}

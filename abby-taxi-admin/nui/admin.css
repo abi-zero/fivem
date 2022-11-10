@@ -1,0 +1,92 @@
+* {
+  color:white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12;
+}
+
+/* Grid */
+.container {
+    background-color:black;
+    position:absolute;
+    left:480px;
+    top:270px;
+    width:960px;
+    height:540px;
+    display: grid; 
+    grid-template-columns: 5fr 5fr; 
+    grid-template-rows: 1fr 9fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "navbar navbar"
+      "list information"; 
+}
+.navbar { grid-area: navbar; border-bottom:1px solid yellow; min-width:100%; min-height:100%;}
+
+.list { grid-area: list; border-right:1px solid yellow; min-width:100%; min-height:100%;}
+
+.information {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "totals statistics"
+    "best-employees ."
+    "worst-employees .";
+  grid-area: information;
+}
+.totals { grid-area: totals; border:1px solid yellow;}
+.best-employees {grid-area: best-employees; border: 1px solid yellow;}
+.worst-employees {grid-area: worst-employees; border: 1px solid yellow;}
+.statistics {grid-area:statistics; border: 1px solid yellow;}
+
+
+/* Table styling */
+th {
+  width: 1fr;
+  min-width:1fr;
+  height:1fr;
+  max-height:1fr;
+}
+tr {
+  min-height:1fr;
+  height:1fr;
+  max-height: 1fr;
+  border: 1px solid yellow;
+}
+td {
+  max-height:1fr;
+}
+.date {
+  font-family:'Courier New', Courier, monospace;
+  text-align:center;
+}
+.name {
+  font-family:cursive;
+}
+.fare {
+  font-family:'Courier New', Courier, monospace;
+  text-align: right;
+  color:yellow;
+}
+.playercut {
+  font-family:'Courier New', Courier, monospace;
+  text-align: right;
+  color:red;
+}
+.businesscut {
+  font-family:'Courier New', Courier, monospace;
+  text-align: right;
+  color:lawngreen;
+}
+.number {
+  font-family:'Courier New', Courier, monospace;
+  text-align: right;
+  color:white;
+}
+
+/* Totals styling */
+
+.totals > div {
+  height:1fr;
+}
